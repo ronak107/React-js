@@ -1,8 +1,28 @@
 import React from "react";
 
+import { useState } from "react/cjs/react.development";
+
 export default function About() {
+  const [myStyle, setmyStyle] = useState({
+    color: "white",
+    backgroundColor: "black",
+  });
+
+  //   toggleStyle = () => {
+  //     if (myStyle.color == "white") {
+  //       setmyStyle({
+  //         color: "white",
+  //         backgroundColor: "black",
+  //       });
+  //     } else {
+  //       setmyStyle({
+  //         color: "white",
+  //         backgroundColor: "black",
+  //       });
+  //     }
+  //   };
   return (
-    <div className="container">
+    <div className="container" style={myStyle}>
       <h1>About us</h1>
       <div className="accordion" id="accordionExample">
         <div className="accordion-item">
@@ -24,7 +44,7 @@ export default function About() {
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample"
           >
-            <div className="accordion-body">
+            <div className="accordion-body" style={myStyle}>
               <strong>This is the first item's accordion body.</strong> It is
               shown by default, until the collapse plugin adds the appropriate
               classes that we use to style each element. These classes control
@@ -36,7 +56,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="accordion-item">
+        <div className="accordion-item" style={myStyle}>
           <h2 className="accordion-header" id="headingTwo">
             <button
               className="accordion-button collapsed"
@@ -55,7 +75,7 @@ export default function About() {
             aria-labelledby="headingTwo"
             data-bs-parent="#accordionExample"
           >
-            <div className="accordion-body">
+            <div className="accordion-body" style={myStyle}>
               <strong>This is the second item's accordion body.</strong> It is
               hidden by default, until the collapse plugin adds the appropriate
               classes that we use to style each element. These classes control
