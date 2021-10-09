@@ -3,12 +3,19 @@ import React, { useState } from "react";
 export default function Textform(props) {
   const handleUpClick = () => {
     console.log("upercase was clicked");
+    console.log("You have clicked on handleUpClick" + text);
+    let Newtext = text.toUpperCase();
+    setText(Newtext);
+  };
+  const handleOnChange = (event) => {
+    console.log("on change");
+    setText(event.target.value);
   };
   const [text, setText] = useState("Enter text here");
 
   return (
     <div>
-      <h1>{props.heading}</h1>
+      {/* <h1>{props.heading}</h1> */}
       <div className="mb-3">
         <label className="form-label">
           <h1>{props.heading}</h1>
@@ -16,6 +23,7 @@ export default function Textform(props) {
         <textarea
           className="form-control"
           value={text}
+          onChange={handleOnChange}
           id="mybox"
           rows="8"
         ></textarea>
