@@ -1,26 +1,28 @@
 import React from "react";
 
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 
 export default function About() {
   const [myStyle, setmyStyle] = useState({
     color: "white",
     backgroundColor: "black",
   });
-
-  //   toggleStyle = () => {
-  //     if (myStyle.color == "white") {
-  //       setmyStyle({
-  //         color: "white",
-  //         backgroundColor: "black",
-  //       });
-  //     } else {
-  //       setmyStyle({
-  //         color: "white",
-  //         backgroundColor: "black",
-  //       });
-  //     }
-  //   };
+  const [btntext, setbtntext] = useState("Enable Light mode");
+  const toggleStyle = () => {
+    if (myStyle.color === "white") {
+      setmyStyle({
+        color: "black",
+        backgroundColor: "white",
+      });
+      setbtntext("Enable Dark mode");
+    } else {
+      setmyStyle({
+        color: "white",
+        backgroundColor: "black",
+      });
+      setbtntext("Enable Light mode");
+    }
+  };
   return (
     <div className="container" style={myStyle}>
       <h1>About us</h1>
@@ -30,6 +32,7 @@ export default function About() {
             <button
               className="accordion-button"
               type="button"
+              style={myStyle}
               data-bs-toggle="collapse"
               data-bs-target="#collapseOne"
               aria-expanded="true"
@@ -61,6 +64,7 @@ export default function About() {
             <button
               className="accordion-button collapsed"
               type="button"
+              style={myStyle}
               data-bs-toggle="collapse"
               data-bs-target="#collapseTwo"
               aria-expanded="false"
@@ -92,6 +96,7 @@ export default function About() {
             <button
               className="accordion-button collapsed"
               type="button"
+              style={myStyle}
               data-bs-toggle="collapse"
               data-bs-target="#collapseThree"
               aria-expanded="false"
@@ -121,8 +126,12 @@ export default function About() {
       </div>
       <div className="container my-3">
         {" "}
-        <button type="button" className="btn btn-secondary">
-          Enable dark mode
+        <button
+          onClick={toggleStyle}
+          type="button"
+          className="btn btn-secondary"
+        >
+          {btntext}
         </button>
       </div>
     </div>
