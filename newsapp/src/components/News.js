@@ -2,15 +2,406 @@ import React, { Component } from "react";
 import Newsiteam from "./Newsiteam";
 
 export class News extends Component {
+  artical = [
+    {
+      source: {
+        id: "cnn",
+        name: "CNN",
+      },
+      author: "Charles Riley, CNN Business",
+      title:
+        "Nobel Prize in economics awarded to David Card, Joshua Angrist and Guido Imbens - CNN",
+      description:
+        "David Card, Joshua Angrist and Guido Imbens have been awarded the 2021 Nobel Prize in economic sciences for contributions to labor economics and analysis of causal relationships, the Royal Swedish Academy of Sciences announced on Monday.",
+      url: "https://www.cnn.com/2021/10/11/business/nobel-prize-economics-winner-2021-intl/index.html",
+      urlToImage:
+        "https://cdn.cnn.com/cnnnext/dam/assets/210930074508-nobel-prize-medal-file-2020-super-tease.jpg",
+      publishedAt: "2021-10-11T10:21:00Z",
+      content: null,
+    },
+    {
+      source: {
+        id: null,
+        name: "CNBC",
+      },
+      author: "Berkeley Lovelace Jr.",
+      title:
+        "Merck asks FDA to authorize antiviral Covid pill for emergency use - CNBC",
+      description:
+        "The Covid-19 treatment – known as molnupiravir – could be available to Americans by late this year.",
+      url: "https://www.cnbc.com/2021/10/11/covid-pill-merck-asks-fda-to-authorize-antiviral-for-emergency-use.html",
+      urlToImage:
+        "https://image.cnbcfm.com/api/v1/image/106848512-1614787765983-merck.jpg?v=1614787788",
+      publishedAt: "2021-10-11T10:05:30Z",
+      content:
+        "Merck said Monday it asked the Food and Drug Administration to authorize emergency use of its experimental antiviral pill to treat mild-to-moderate Covid-19 in adults.\r\nThe U.S. drugmaker's request c… [+2184 chars]",
+    },
+    {
+      source: {
+        id: null,
+        name: "Www.https",
+      },
+      author: "New York Post",
+      title:
+        "Smoking marijuana could lead to breakthrough COVID cases, study finds - Fox News",
+      description:
+        "Heavy marijuana users who are also vaccinated may be more susceptible to breakthrough cases of COVID-19, a new study found.",
+      url: "https://www.https://nypost.com/2021/10/10/covid-19-breakthrough-cases-linked-to-smoking-marijuana-study-finds/",
+      urlToImage:
+        "https://static.foxnews.com/foxnews.com/content/uploads/2020/12/Weed-Smoke-iStock-1.jpg",
+      publishedAt: "2021-10-11T09:11:27Z",
+      content:
+        "Heavy marijuana users who are also vaccinated may be more susceptible to breakthrough cases of COVID-19, a new study found.\r\nThe study, published last Tuesday in World Psychology, found that those wi… [+2182 chars]",
+    },
+    {
+      source: {
+        id: null,
+        name: "TMZ",
+      },
+      author: "TMZ Staff",
+      title:
+        "Britney Spears' Conservatorship Changes Won't Affect Custody, Says K-Fed's Lawyer - TMZ",
+      description:
+        "Britney Spears is heading toward major life changes, but one thing that will likely remain constant is the custody arrangement for her 2 sons.",
+      url: "https://www.tmz.com/2021/10/11/britney-spears-kevin-federline-child-custody-conservatorship/",
+      urlToImage:
+        "https://imagez.tmz.com/image/9f/16by9/2021/10/08/9ff8200ecaf84ff3966fbf77c39633c3_xl.jpg",
+      publishedAt: "2021-10-11T08:00:00Z",
+      content:
+        "Britney Spears is heading toward major life changes, but one thing that will remain constant is the custody arrangement for her 2 sons ... at least according to Kevin Federline's attorney.\r\nMark Vinc… [+1291 chars]",
+    },
+    {
+      source: {
+        id: null,
+        name: "Cointelegraph",
+      },
+      author: "William Suberg",
+      title:
+        "BTC price hits $57K five-month high — 5 things to watch in BTC this week - Cointelegraph",
+      description:
+        "Bitcoin is hitting fresh multi-month highs as the week begins — here are five BTC price factors to watch.",
+      url: "https://cointelegraph.com/news/btc-price-hits-57k-five-month-high-5-things-to-watch-in-btc-this-week",
+      urlToImage:
+        "https://images.cointelegraph.com/images/1200_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjEtMTAvMTQ3YjRjNjUtM2U2OS00YzgxLTg1MTItYmYzNzc2YmU1ZmNjLmpwZw==.jpg",
+      publishedAt: "2021-10-11T07:00:00Z",
+      content:
+        "Bitcoin(BTC) is on top form almost literally as it heads into a new week less than 15% from all-time highs.\r\nA classic cocktail of factors has laid the foundation for a Q4 finale which analysts are n… [+7593 chars]",
+    },
+    {
+      source: {
+        id: null,
+        name: "ESPN",
+      },
+      author: "Adam Teicher",
+      title:
+        "After uncharacteristic rash of turnovers, Kansas City Chiefs' Patrick Mahomes says he has to 'reevaluate what I'm doing' - ESPN",
+      description:
+        "Patrick Mahomes took responsibility for what's ailing the 2-3 Chiefs following Sunday night's loss to the Bills, saying that his recent rash of turnovers is to blame and that he needs to \"reevaluate where I'm at, what decisions I'm making.\"",
+      url: "https://www.espn.com/nfl/story/_/id/32378658/after-uncharacteristic-rash-turnovers-kansas-city-chiefs-patrick-mahomes-says-reevaluate-doing",
+      urlToImage:
+        "https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2021%2F1011%2Fr921396_1296x729_16%2D9.jpg",
+      publishedAt: "2021-10-11T06:43:23Z",
+      content:
+        "KANSAS CITY, Mo. -- Patrick Mahomes took responsibility for what's ailing the 2-3 Kansas City Chiefs, saying after their 38-20 loss to the Buffalo Bills on Sunday night that his turnovers are to blam… [+2011 chars]",
+    },
+    {
+      source: {
+        id: null,
+        name: "Android Authority",
+      },
+      author: null,
+      title:
+        "Pixel Pass leaked: A Pixel phone and Google services for one monthly fee - Android Authority",
+      description:
+        "Google is apparently working on a Pixel Pass subscription service, bundling a variety of services with a Pixel phone.",
+      url: "https://www.androidauthority.com/google-pixel-pass-3037006/",
+      urlToImage:
+        "https://cdn57.androidauthority.net/wp-content/uploads/2021/08/google-pixel-5a-review-maybe-moon-case-google-logo-g-logo-2-scaled.jpg",
+      publishedAt: "2021-10-11T06:35:42Z",
+      content:
+        "<ul><li>Google is reportedly working on a Pixel Pass subscription service.</li><li>This would bundle a Pixel phone purchase with a bundle of premium Google services.</li><li>Theres no word on availab… [+1581 chars]",
+    },
+    {
+      source: {
+        id: null,
+        name: "News On 6",
+      },
+      author: "Ryan Welton",
+      title: "Possible Tornado Moves Through Coweta - News On 6",
+      description:
+        "A possible tornado moved through the town of Coweta on Sunday night. News On 6 Chief Meteorologist Travis Meyer and News On 6 Storm Tracker Von Castor tracked the storm at about 10:45 p.m.",
+      url: "https://www.newson6.com/story/6163b7fc784fd80be9b79bc4/possible-tornado-moves-through-coweta",
+      urlToImage:
+        "https://cdn.field59.com/KOTV/deb0ed633b4f44e5e2d04dd716668842b1fbcc76.jpg",
+      publishedAt: "2021-10-11T06:29:28Z",
+      content:
+        "A possible tornado moved through the town of Coweta on Sunday night.\r\nNews On 6 Chief Meteorologist Travis Meyer and News On 6 Storm Tracker Von Castor tracked the storm at about 10:45 p.m.\r\nCastor s… [+556 chars]",
+    },
+    {
+      source: {
+        id: null,
+        name: "New York Times",
+      },
+      author: "Saif Hasnat, Sameer Yasir",
+      title:
+        "Rohingya on Bangladesh Island of Bhashan Char Seek to Leave - The New York Times",
+      description:
+        "Bangladesh is relocating Rohingya refugees who fled Myanmar to a vulnerable, environmentally unstable island that is giving some cause to run again.",
+      url: "https://www.nytimes.com/2021/10/10/world/asia/bangladesh-rohingya-bhashan-char.html",
+      urlToImage:
+        "https://static01.nyt.com/images/2021/10/10/world/10bangladesh-island-1/10bangladesh-island-1-facebookJumbo.jpg",
+      publishedAt: "2021-10-11T06:15:00Z",
+      content:
+        "The Bangladesh government, which hopes to eventually send the Rohingya back to Myanmar, said refugees would be happier once their relatives begin arriving and a local economy develops.\r\nA community n… [+1189 chars]",
+    },
+    {
+      source: {
+        id: "associated-press",
+        name: "Associated Press",
+      },
+      author: "Ashok Sharma",
+      title:
+        "India, China army talks to defuse border tensions fail - Associated Press",
+      description:
+        "NEW DELHI (AP) — Talks between Indian and Chinese army commanders to disengage troops from key friction areas along their border have ended in a stalemate and failed to ease a 17-month standoff that has sometimes led to deadly clashes, the two sides said Mond…",
+      url: "https://apnews.com/article/india-china-army-85d72bb98bbebfb9cefe9fea329840cc",
+      urlToImage:
+        "https://storage.googleapis.com/afs-prod/media/4f5b6872a2f44d7e91eaa47740ee49b9/3000.jpeg",
+      publishedAt: "2021-10-11T05:32:55Z",
+      content:
+        "NEW DELHI (AP) Talks between Indian and Chinese army commanders to disengage troops from key friction areas along their border have ended in a stalemate and failed to ease a 17-month standoff that ha… [+3132 chars]",
+    },
+    {
+      source: {
+        id: null,
+        name: "ScienceAlert",
+      },
+      author: "Jacinta Bowler",
+      title:
+        "What The Heck Was This Blue 'Luminous Event' Photographed From The Space Station? - ScienceAlert",
+      description:
+        "On October 8, French astronaut Thomas Pesquet captured something strikingly rare from on board the International Space Station (ISS).",
+      url: "https://www.sciencealert.com/what-the-heck-is-this-luminous-event-captured-in-a-photo-from-the-international-space-station",
+      urlToImage:
+        "https://www.sciencealert.com/images/2021-10/processed/51562573278_b6a7ce72df_k-cropped_1024.jpg",
+      publishedAt: "2021-10-11T05:28:48Z",
+      content:
+        "On October 8, French astronaut Thomas Pesquet captured something strikingly rare from on board the International Space Station (ISS).\r\nThe photo which is a single frame taken from a longer timelapse … [+3236 chars]",
+    },
+    {
+      source: {
+        id: null,
+        name: "Fox Business",
+      },
+      author: "Edmund DeMarche",
+      title:
+        "Southwest cancels more than 1,000 flights, Cruz says it’s Biden’s ‘illegal vaccine mandate at work’ - Fox Business",
+      description:
+        "Sen. Ted Cruz, R-Texas, took to Twitter late Sunday to speculate about Southwest Airlines’ decision to cancel more than 1,000 flights just days after its pilots’ union asked a court to block the company's new COVID-19 vaccination mandate.",
+      url: "https://www.foxbusiness.com/economy/southwest-cancels-more-than-1000-flights-cruz-says-its-bidens-illegal-vaccine-mandate-at-work",
+      urlToImage:
+        "https://a57.foxnews.com/static.foxbusiness.com/foxbusiness.com/content/uploads/2021/08/0/0/GettyImages-1233783415.jpg?ve=1&tl=1",
+      publishedAt: "2021-10-11T05:24:55Z",
+      content:
+        "Sen. Ted Cruz, R-Texas, took to Twitter late Sunday to speculate about Southwest Airlines’ decision to cancel more than 1,000 flights just days after its pilots’ union asked a court to block the comp… [+3029 chars]",
+    },
+    {
+      source: {
+        id: null,
+        name: "The Guardian",
+      },
+      author: "Guardian staff reporter",
+      title:
+        "US to give humanitarian aid to Afghanistan, Taliban say - The Guardian",
+      description:
+        "US says it discussed aid in talks in Doha but Taliban say deal agreed that stops short of formal recognition of new rulers",
+      url: "https://amp.theguardian.com/world/2021/oct/11/us-to-give-humanitarian-aid-to-afghanistan-taliban-say",
+      urlToImage: null,
+      publishedAt: "2021-10-11T05:04:00Z",
+      content:
+        "TalibanUS says it discussed aid in talks in Doha but Taliban say deal agreed that stops short of formal recognition of new rulers\r\nMon 11 Oct 2021 03.35 BST\r\nThe United States has agreed to provide h… [+4740 chars]",
+    },
+    {
+      source: {
+        id: null,
+        name: "New York Post",
+      },
+      author: "Kenneth Garger",
+      title:
+        "Man charged with murdering Georgia police officer working first shift - New York Post ",
+      description:
+        "A suspect in the shooting death of a Georgia police officer was arrested Sunday as investigators uncovered a potential motive for the killing.",
+      url: "https://nypost.com/2021/10/10/damien-ferguson-charged-with-murdering-georgia-police-officer-dylan-harrison/",
+      urlToImage:
+        "https://nypost.com/wp-content/uploads/sites/2/2021/10/damien-ferguson-2.jpg?quality=90&strip=all&w=1024",
+      publishedAt: "2021-10-11T03:44:00Z",
+      content:
+        "A suspect in the shooting death of a Georgia police officer was arrested Sunday as investigators uncovered a potential motive for the killing.\r\nDamien Ferguson, 43, was captured at his Alamo home and… [+1506 chars]",
+    },
+    {
+      source: {
+        id: null,
+        name: "PhoneArena",
+      },
+      author: "Alan Friedman",
+      title:
+        "Brand new iPhone 14 Pro 5G concept video resembles Twitter tipster's Pro Max render - PhoneArena",
+      description:
+        "ConceptsiPhone released a video showing off its render of the Apple iPhone 14 Pro. It resembles Twitter tipster Jon Prosser's render of the iPhone 14 Pro Max with a hole-punch camera in front.",
+      url: "https://www.phonearena.com/news/video-shows-iphone-14-pro-max-5g-concept_id135624",
+      urlToImage:
+        "https://m-cdn.phonearena.com/images/article/135624-wide-two_1200/Brand-new-iPhone-14-Pro-5G-concept-video-resembles-Twitter-tipsters-Pro-Max-render.jpg",
+      publishedAt: "2021-10-11T03:22:44Z",
+      content:
+        "This is our new notification center.\r\n Inside, you will find updates on the most important things happening right now.\r\nGot it",
+    },
+    {
+      source: {
+        id: null,
+        name: "Yahoo Entertainment",
+      },
+      author: "Catherine Garcia, Night editor",
+      title:
+        "Adam Schiff: Jan. 6 select committee preparing to urge prosecution of anyone who ignores subpoenas - Yahoo News",
+      description:
+        "Adam Schiff: Jan. 6 select committee preparing to urge prosecution of anyone who ignores subpoenas",
+      url: "https://news.yahoo.com/adam-schiff-jan-6-select-030848671.html",
+      urlToImage:
+        "https://s.yimg.com/uu/api/res/1.2/cQ7WPkODMpl6N3m_ezubUg--~B/aD00NzU7dz04NDU7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/the_week_574/9a7140c09fde47cb7f40b7289b5ad7a4",
+      publishedAt: "2021-10-11T03:16:02Z",
+      content:
+        'Rep. Adam Schiff (D-Calif.) Kevin Dietsch/Getty Images \r\nRep. Adam Schiff (D-Calif.), a member of the House select committee investigating the Jan. 6 Capitol riot, said on Sunday that the panel is "p… [+1408 chars]',
+    },
+    {
+      source: {
+        id: null,
+        name: "Daily Beast",
+      },
+      author: "AJ McDougall",
+      title:
+        "Eric Clapton Donated Van, More Than $1,300 to Anti-Vaxxer Music Group - The Daily Beast",
+      description:
+        "The singer bankrolled a “pro-medical choice” music group’s tour around the U.K., according to Rolling Stone.",
+      url: "https://www.thedailybeast.com/eric-clapton-donated-personal-van-more-than-dollar1300-to-covid-19-anti-vaxxers-gofundme",
+      urlToImage:
+        "https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_2149,w_3820,x_0,y_388/dpr_2.0/c_limit,w_740/fl_lossy,q_auto/v1633916560/GettyImages-158329896_bwvkrv",
+      publishedAt: "2021-10-11T02:57:50Z",
+      content:
+        "Eric Clapton not only donated more than $1,300 to a GoFundMe posted by a vaccine skeptical music group, but he also lent the pro-medical choice band his familys personal Transporter van to use for to… [+1159 chars]",
+    },
+    {
+      source: {
+        id: null,
+        name: "mlive.com",
+      },
+      author: "Mark Torregrossa | mtorregr@mlive.com",
+      title:
+        "Powerful Plains storm may spark isolated tornadoes, severe storms across Michigan and Great Lakes - MLive.com",
+      description:
+        "Severe storms are possible in the Great Lakes region as storm system passes through late Monday into Tuesday.",
+      url: "https://www.mlive.com/weather/2021/10/powerful-plains-storm-may-spark-isolated-tornadoes-severe-storms-across-michigan-and-great-lakes.html",
+      urlToImage:
+        "https://www.mlive.com/resizer/-aZ0O2YPapynz-WugSFDBYE1JaA=/1280x0/smart/cloudfront-us-east-1.images.arcpublishing.com/advancelocal/AQ6SQEWMDZED5M4EWEEA5DJ2NE.png",
+      publishedAt: "2021-10-11T02:47:00Z",
+      content:
+        "A tightly cranked up storm system in the Plains tonight with move across the Great Lakes region Monday night and Tuesday. Even though the timing moving through Michigan leans toward escaping major se… [+2305 chars]",
+    },
+    {
+      source: {
+        id: null,
+        name: "Cbslocal.com",
+      },
+      author: "WCCO-TV Staff",
+      title:
+        "3 Men Arrested After ‘Hellish’ Mass Shooting At St. Paul Bar Leaves 1 Dead, 14 Injured - CBS Minnesota",
+      description:
+        "A woman is dead, 14 people are injured and three men are in custody after a mass shooting early Sunday morning near downtown St. Paul.",
+      url: "https://minnesota.cbslocal.com/2021/10/10/st-paul-mass-shooting-1-dead-14-hurt-3-arrested/",
+      urlToImage:
+        "https://minnesota.cbslocal.com/wp-content/uploads/sites/15909630/2021/10/RAW-10102021-St-Paul-7th-Street-Multiple-Shooting-Scene.jpg?w=1500",
+      publishedAt: "2021-10-11T02:27:00Z",
+      content:
+        "MINNEAPOLIS (WCCO) — A woman is dead, 14 people are injured and three men are in custody after a mass shooting early Sunday morning near downtown St. Paul. \r\nDozens of gunshots erupted just after mid… [+6981 chars]",
+    },
+    {
+      source: {
+        id: null,
+        name: "Vulture",
+      },
+      author: "Bethy Squires",
+      title:
+        "SNL: Watch Kim Kardashian Helm the Costco Pop Group You Never Knew You Needed - Vulture",
+      description: "$1.50 hot dogs? Costco is a vibe.",
+      url: "https://www.vulture.com/2021/10/snl-watch-the-costco-pop-group-you-never-knew-you-needed.html",
+      urlToImage:
+        "https://pyxis.nymag.com/v1/imgs/7b9/f8e/ba017b1a9335d011c97d324bef3ad56447-glitter-revolution.1x.rsocial.w1200.png",
+      publishedAt: "2021-10-11T02:17:44Z",
+      content:
+        "Marketing to the youths its tough! In this cut for time sketch from October 9s Saturday Night Live, Sarah Sherman unveils Costcos newest initiative in expanding into the teen market. Glitter Revoluti… [+383 chars]",
+    },
+  ];
+  constructor() {
+    super();
+    this.state = {
+      artical: this.artical,
+      loading: false,
+      page: 1,
+    };
+  }
+  async componentDidMount() {
+    let url =
+      "https://newsapi.org/v2/top-headlines?country=in&apiKey=085728e13a314f85aef565032d9b02be&page=1";
+    let data = await fetch(url);
+    let parsedData = await data.json();
+    this.setState({ artical: parsedData.articles });
+  }
+  handlepreClick = async () => {
+    console.log("previous");
+  };
+  handlenexClick = async () => {
+    console.log("next");
+    let url =
+      "https://newsapi.org/v2/top-headlines?country=in&apiKey=085728e13a314f85aef565032d9b02be&page=1";
+    let data = await fetch(url);
+    let parsedData = await data.json();
+    this.setState({ artical: parsedData.articles });
+  };
+
   render() {
     return (
       <div className="container my-3">
-        <Newsiteam />
-        <Newsiteam />
-        <Newsiteam />
-        <Newsiteam />
-        <Newsiteam />
-        <Newsiteam />
+        <h2>Newsapp - Top Headline</h2>
+        <div className="row">
+          {this.state.artical.map((e) => {
+            return (
+              <div className="col-md-4" key={e.url}>
+                <Newsiteam
+                  title={e.title ? e.title.slice(0, 45) : ""}
+                  description={e.description ? e.description.slice(0, 80) : ""}
+                  urlToImage={e.urlToImage}
+                  newsurl={e.url}
+                />
+              </div>
+            );
+          })}
+        </div>
+        <div className="container d-flex justify-content-between">
+          <button
+            disabled={this.state.page <= 1}
+            class="btn btn-dark"
+            onClick={this.handlepreClick}
+            type="submit"
+          >
+            &larr; previous
+          </button>
+          <button
+            class="btn btn-dark"
+            onClick={this.handlenexClick}
+            type="submit"
+          >
+            Next &rarr;
+          </button>
+        </div>
       </div>
     );
   }
