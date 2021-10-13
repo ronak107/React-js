@@ -106,7 +106,7 @@ export class News extends Component {
         <div className="container d-flex justify-content-between">
           <button
             disabled={this.state.page <= 1}
-            class="btn btn-dark"
+            className="btn btn-dark"
             onClick={this.handlepreClick}
             type="submit"
           >
@@ -117,7 +117,7 @@ export class News extends Component {
               this.state.page + 1 >
               Math.ceil(this.state.totalResults / this.props.pagesize)
             }
-            class="btn btn-dark"
+            className="btn btn-dark"
             onClick={this.handlenexClick}
             type="submit"
           >
