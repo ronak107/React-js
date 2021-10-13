@@ -27,6 +27,7 @@ export class News extends Component {
     this.setState({ loading: true });
     let data = await fetch(url);
     let parsedData = await data.json();
+    console.log(parsedData);
     this.setState({
       artical: parsedData.articles,
       totalResults: parsedData.totalResults,
@@ -83,7 +84,11 @@ export class News extends Component {
   render() {
     return (
       <div className="container my-3">
-        <h1 className="text-center">Newsapp - Top Headline</h1>
+        <h1 className="text-center">
+          <span className="badge bg-warning text-dark">
+            Newsapp - Top Headline
+          </span>
+        </h1>
         {this.state.loading && <Spinner />}
 
         <div className="row">
@@ -98,6 +103,9 @@ export class News extends Component {
                     }
                     urlToImage={e.urlToImage}
                     newsurl={e.url}
+                    author={e.author}
+                    date={e.publishedAt}
+                    Info={e.source.name}
                   />
                 </div>
               );
