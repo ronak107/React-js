@@ -6,7 +6,7 @@ export class Newsiteam extends Component {
       this.props;
     return (
       <div className="my-3">
-        <div className="card">
+        <div className="card" style={{ backgroundColor: " #cdb7c3" }}>
           <img src={urlToImage} className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title">
