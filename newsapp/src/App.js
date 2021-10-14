@@ -20,7 +20,7 @@ export default class App extends Component {
     return (
       <div>
         <>
-          <LoadingBar color="#f11946" progress={this.state.p} />
+          <LoadingBar color="#f11946" progress={this.state.progress} />
           <Router>
             <Navbar />
 
@@ -106,7 +106,7 @@ export default class App extends Component {
                 />
               </Route>
             </Switch>
-            {/*<News setprogress={this.setprogress}iteam /> */}
+            {/*<News setprogress={this.setprogress} iteam /> */}
           </Router>
         </>
       </div>
