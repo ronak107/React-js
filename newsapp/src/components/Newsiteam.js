@@ -25,7 +25,7 @@ export class Newsiteam extends Component {
               rel="noreferrer"
               className="btn btn-sn btn-dark"
             >
-              Read More!
+              Read More..!!
             </a>
           </div>
         </div>
